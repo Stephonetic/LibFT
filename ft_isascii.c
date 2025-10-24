@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: steph <steph@student.42.fr>                +#+  +:+       +#+        */
+/*   By: shannema <shannema@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 16:15:48 by shannema          #+#    #+#             */
-/*   Updated: 2025/10/19 11:34:58 by steph            ###   ########.fr       */
+/*   Created: 2025/10/24 16:28:54 by shannema          #+#    #+#             */
+/*   Updated: 2025/10/24 17:06:18 by shannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int	ft_isascii(int c)
 {
