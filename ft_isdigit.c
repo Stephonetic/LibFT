@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shannema <shannema@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 16:26:05 by shannema          #+#    #+#             */
-/*   Updated: 2025/10/24 16:26:20 by shannema         ###   ########.fr       */
+/*   Created: 2025/10/23 13:53:51 by shannema          #+#    #+#             */
+/*   Updated: 2025/10/23 14:43:59 by shannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+#include "libft.h" //for .h files you make for yourself, and < > are to be written to indicate pre built libraries, such as stdio 
+
+int ft_isdigit (int c)
 {
-    return ft_isalpha(c) || ft_isdigit(c); //combination of previous functions, declared
+    if (c > '0' && c < '9') //we're indicating the ascii value with the '' 
+        return (0);
+    return (1);
 }
+
 #include <stdio.h>
 
-int main()
+int main (int argc, char **argv)
 {
-    printf("%d %d\n", ft_isalnum('A'), ft_isalnum('%'));
-    return(0);
+	printf("%d\n", ft_isdigit('2'));
+	return (0);
 }
