@@ -6,23 +6,24 @@
 /*   By: shannema <shannema@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 13:53:51 by shannema          #+#    #+#             */
-/*   Updated: 2025/10/24 17:07:22 by shannema         ###   ########.fr       */
+/*   Updated: 2025/10/25 20:33:56 by shannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" //for .h files you make for yourself, and < > are to be written to indicate pre built libraries, such as stdio 
+#include "libft.h"
 
-int ft_isdigit (int c)
+int	ft_isdigit(int c)
 {
-    if (c > '0' && c < '9') //we're indicating the ascii value with the '' 
-        return (0);
-    return (1);
-}
-
-#include <stdio.h>
-
-int main (int argc, char **argv)
-{
-	printf("%d\n", ft_isdigit('2'));
+	if (c >= '0' && c <= '9')
+		return (1);
 	return (0);
 }
+
+// # include <stdio.h>
+
+// int main(void)
+// {
+// 	printf("%d\n", ft_isdigit('2'));
+// 	printf("%d\n", ft_isdigit('a'));
+// 	return (0);
+// }
