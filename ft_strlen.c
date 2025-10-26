@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shannema <shannema@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 16:28:54 by shannema          #+#    #+#             */
-/*   Updated: 2025/10/26 02:05:52 by shannema         ###   ########.fr       */
+/*   Created: 2025/10/25 20:44:57 by shannema          #+#    #+#             */
+/*   Updated: 2025/10/26 02:13:27 by shannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
-{
-	return (c >= 0 && c <= 127);
-}
-// #include <stdio.h>
+#include "libft.h"
 
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+	i = 0;
+
+	while (s[i])
+		i++;
+	return (i);
+}
+
+// #include <string.h>
+// #include <stdio.h>
 // int	main(void)
 // {
-// 	printf("%d\n", ft_isascii(2));
-// 	printf("%d\n", ft_isascii(135));
-// 	return(0);
+// 	printf("%zu\n", ft_strlen("hello"));
+// 	return (0);
 // }

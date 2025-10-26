@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shannema <shannema@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 16:28:54 by shannema          #+#    #+#             */
-/*   Updated: 2025/10/26 02:05:52 by shannema         ###   ########.fr       */
+/*   Created: 2025/10/25 21:09:04 by shannema          #+#    #+#             */
+/*   Updated: 2025/10/26 02:16:18 by shannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	return (c >= 0 && c <= 127);
+	unsigned char	*tmp_ptr;
+	tmp_ptr = (unsigned char *) s;
+
+	while (n--) *tmp_ptr ++ = (unsigned char)c;
+	return (s);
 }
 // #include <stdio.h>
+// #include <string.h>
 
-// int	main(void)
+// int main(void)
 // {
-// 	printf("%d\n", ft_isascii(2));
-// 	printf("%d\n", ft_isascii(135));
-// 	return(0);
+//     char buf[6] = "xxxxx";
+//     ft_memset(buf, 'A', 4);
+//     buf[4] = 0;
+//     printf("%s\n", buf); // AAAA x
+//     return 0;
 // }
