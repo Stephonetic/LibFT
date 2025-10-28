@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shannema <shannema@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/25 21:09:04 by shannema          #+#    #+#             */
-/*   Updated: 2025/10/27 21:42:42 by shannema         ###   ########.fr       */
+/*   Created: 2025/10/27 18:52:38 by shannema          #+#    #+#             */
+/*   Updated: 2025/10/27 21:55:22 by shannema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*tmp_ptr;
+	char	*tmp_ptr;
 
-	tmp_ptr = (unsigned char *) str;
-	while (len--)
-		*tmp_ptr ++ = (unsigned char)c;
-	return (str);
+	tmp_ptr = (char *) s;
+	while(n > 0)
+	{
+		*(tmp_ptr++) = '\0';
+		n--;
+	}
 }
-// #include <stdio.h>
-// #include <string.h>
-
-// int main(void)
+// void	ft_bzero(void *s, size_t n)
 // {
-//     char buf[6] = "xxxxx";
-//     ft_memset(buf, 'A', 4);
-//     buf[4] = 0;
-//     printf("%s\n", buf); // AAAA x
-//     return 0;
+// 	unsigned char *p = s;
+// 	while (n--)
+// 	*p++ = 0;
 // }
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char a[5] = "abcd";
+	ft_bzero(a+1,2);
+	printf("%d\n", a[1]);
+	return (0);
+}
